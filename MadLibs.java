@@ -20,5 +20,12 @@ public class MadLibs {
         // as a normal String value
         System.out.println("Hello " + userInput);
 
+        /*
+         * I went to the animal <noun>, the <plural_noun> and the <number> beasts were
+         * there.;
+         * Once upon a time in a <adjective> land, a <noun> <adverb> grew.;
+         * I wanted to eat a <noun> but the <adjective><noun> chased me away.;
+         */
+
     }
 }
