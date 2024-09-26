@@ -7,25 +7,34 @@ public class MadLibs {
     public static void main(String[] args) {
         // creates a scanner to process terminal input
         Scanner sc = new Scanner(System.in);
+        // MadLibs Strings
+        String madLib = "I went to the animal <noun>, the <plural_noun> and the <number> beasts were there.";
 
-        // prompts the user so they know when
-        // to enter keyboard input within a program
-        System.out.println("Enter your name: ");
+        // String madLib = "Once upon a time in a <adjective> land, a <noun> <adverb>
+        // grew.";
+        // String madLib = "I wanted to eat a <noun> but the <adjective><noun> chased me
+        // away.";
 
-        // nextLine method returns all keyboard input
-        // until the user presses the Return or Enter key
-        String userInput = sc.nextLine();
+        int openingBracketIndex = madLib.indexOf("<");
+        int closingBracketIndex = madLib.indexOf(">");
 
-        // after collecting input, you can treat user input
-        // as a normal String value
-        System.out.println("Hello " + userInput);
+        String MadLib1 = madLib.substring(openingBracketIndex + 1, closingBracketIndex);
 
-        /*
-         * I went to the animal <noun>, the <plural_noun> and the <number> beasts were
-         * there.;
-         * Once upon a time in a <adjective> land, a <noun> <adverb> grew.;
-         * I wanted to eat a <noun> but the <adjective><noun> chased me away.;
-         */
+        // prompts the user to enter the first word
+        System.out.println("Enter a " + MadLib1);
+        // stores entered noun
+        String userInput1 = sc.nextLine();
+
+        // prompts the user to enter the second word
+        System.out.println("Enter a plural noun.");
+        String userInput2 = sc.nextLine();
+
+        // prompts the user to enter the third word
+        System.out.println("Enter a number.");
+        String userInput3 = sc.nextLine();
+
+        // Output
+        System.out.println(MadLib1Noun);
 
     }
 }
