@@ -39,10 +39,13 @@ public class MadLibs {
         // stores entered word
         String userInput3 = sc.nextLine();
 
-        // Output
-        System.out.print(madLib.substring(0, openingBracketIndex) + userInput1);
-        System.out.print(madLib.substring(closingBracketIndex + 1, openingBracketIndex2) + userInput2);
-        System.out.print(madLib.substring(closingBracketIndex2 + 1, openingBracketIndex3) + userInput3);
-        System.out.print(madLib.substring(closingBracketIndex3 + 1, totalLength));
+        // Substituting responses in
+        String partOne = (madLib.substring(0, openingBracketIndex) + userInput1);
+        String partTwo = (madLib.substring(closingBracketIndex + 1, openingBracketIndex2) + userInput2);
+        String partThree = (madLib.substring(closingBracketIndex2 + 1, openingBracketIndex3) + userInput3);
+        String partFour = (madLib.substring(closingBracketIndex3 + 1, totalLength));
+
+        // Output concatination
+        System.out.println(partOne + partTwo + partThree + partFour);
     }
 }
